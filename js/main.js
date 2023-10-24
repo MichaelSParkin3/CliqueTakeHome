@@ -13,47 +13,61 @@ class App {
 
   _setInitialStates() {
     gsap.set(".banner__headline1", {
-      y: 0,
-      opacity: 0,
+      // y: 32,
+      // opacity: 1,
+      backgroundPositionY: "50%",
     });
   }
 
   _createLenis() {
-    this.lenis = new Lenis({
-      lerp: 0.5,
-    });
+    this.lenis = new Lenis();
   }
 
   _createIntro() {
-    const tl = gsap.timeline();
-
-    tl.to(
-      ".banner__headline1",
-      {
-        y: 32,
-        opacity: 1,
-        ease: "expo.out",
-        duration: 2,
-      },
-      0.5
-    );
+    // const tl = gsap.timeline();
+    // tl.to(
+    //   ".banner__headline1",
+    //   {
+    //     y: 32,
+    //     opacity: 1,
+    //     ease: "expo.out",
+    //     duration: 2,
+    //   },
+    //   0.5
+    // );
   }
 
   _createHero() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".banner__headline1",
-        start: "top top",
-        end: "bottom top",
+        start: "top center",
+        end: "bottom center",
         scroll: true,
         scrub: true,
         markers: true,
       },
     });
 
-    tl.to(".banner__headline2", {
+    tl.to(".banner__headline1", {
       ease: "none",
-      xPercent: 10,
+      backgroundPositionY: "70%",
+    });
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".banner__headline1",
+        start: "top center",
+        end: "bottom center",
+        scroll: true,
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    tl2.to(".banner__headline2", {
+      ease: "none",
+      yPercent: -80,
     });
   }
 

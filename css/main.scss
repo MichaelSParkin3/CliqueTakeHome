@@ -1,11 +1,63 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+}
+
+@import url("https://fonts.cdnfonts.com/css/campton");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 .layout {
-  width: 1440px;
-  margin: 0 auto;
-  background-color: antiquewhite;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.minor-text {
+  color: #1a1a1a;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
+}
+.mid-text {
+  color: #fff;
+  font-family: "Campton";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 625;
+  line-height: normal;
+}
+.major-text {
+  color: #000;
+  font-family: "Inter";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.great-text {
+  color: #000;
+  font-family: "Inter";
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 98.5px; /* 102.604% */
+}
+.small-title {
+  color: #fff;
+  font-family: "Campton";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 625;
+  line-height: normal;
+  letter-spacing: 3.36px;
+  text-transform: uppercase;
 }
 
 nav {
@@ -37,33 +89,131 @@ nav {
   }
 }
 
-.banner {
+.main-section-1 {
+  width: 100%;
   display: flex;
-  width: 1440px;
-  padding: 148px 43px 408px 42px;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
-  &__headline1 {
-    text-align: center;
-    font-family: Inter;
-    font-size: 180px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160px; /* 88.889% */
-    background: url("https://s3-alpha-sig.figma.com/img/decb/4963/b2b17141aa99625a6042801dc4811de7?Expires=1698624000&Signature=UoebW61rNCeGe4khKzqw0C9FhDqIOSHNASDTZK85jVXrsUXy4M9KOJ5KyLMi7aDZqeaQQQWvn7teO5b97liSL9~g9rGPPifQ6KnECGmmVR9cMo0Zz8WI7ngTPXXzxRZZdTI8k5P4cWTRwFmgPEUA7tniZDWbxqPsei5XOBf1TP9O8LJ8iq3iw23tHV6MC9wRhPkqvo8~R1W0E~N5MbirMIP7TZKjmKs57fIt3d-fA6-qEYdS~TxfceQ1A5c6m9HP~27eT3MJw41wK6OKXHEZOnZ7L-q6SIx7KWNOC1gQRTJUMILGWy8VsOk10fAVC-DVSGYoUnXyJUUm2rTPebU6aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"),
-      lightgray 60px -224.46px / 90.332% 243.171% no-repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  &__headline2 {
-    color: #1a1a1a;
-    text-align: center;
-    font-family: Inter;
-    font-size: 180px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 155.5px; /* 86.389% */
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #fff 8.84%, #e4e4e7 63.4%);
+  &__inner {
+    width: 1440px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .banner {
+      display: flex;
+      width: 1440px;
+      height: 100vh;
+      padding: 148px 43px 408px 42px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      &__headline1 {
+        height: 350px;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 180px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160px; /* 88.889% */
+        background: url("../img/headline.jpg");
+        background-position-y: 50%;
+        background-size: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &__headline2 {
+        color: #1a1a1a;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 180px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 155.5px; /* 86.389% */
+        position: absolute;
+        bottom: -100%;
+      }
+    }
+
+    .news {
+      display: flex;
+      &__left {
+        margin-right: 15px;
+        &__card {
+          width: 866px;
+          height: 496px;
+          flex-shrink: 0;
+          border-radius: 48px;
+          background: url("../img/Frame\ 15.jpg"),
+            lightgray 50% / cover no-repeat;
+          display: flex;
+          justify-content: end;
+          flex-direction: column;
+        }
+      }
+      &__right {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__card {
+          width: 446px;
+          height: 232px;
+          flex-shrink: 0;
+          border-radius: 48px;
+          background: url("../img/Frame\ 25.jpg"),
+            lightgray 50% / cover no-repeat;
+          display: flex;
+          justify-content: end;
+          flex-direction: column;
+        }
+      }
+      &__card-bottom {
+        display: flex;
+        justify-content: space-between;
+        img {
+          margin-left: 15px;
+        }
+      }
+      &__card-inner {
+        padding: 0px 7.5% 3% 7.5%;
+        h4 {
+          margin: 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .events {
+      width: 1344px;
+      &__title {
+        color: #000;
+      }
+      &__inner-cont {
+        display: inline-flex;
+      }
+      &__inner-block {
+        .minor-text,
+        .mid-text {
+          color: #000;
+        }
+      }
+      &__inner-button {
+      }
+      &__divider {
+        width: 1px;
+        height: 131px;
+        opacity: 0.2;
+        background: #2e2e2f;
+        margin-right: 15px;
+      }
+    }
   }
 }

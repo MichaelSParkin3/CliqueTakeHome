@@ -1,5 +1,7 @@
 class App {
   constructor() {
+    this.cardInners = [...document.querySelectorAll(".news__card-inner")];
+
     this._initialize();
     this._render();
   }
@@ -13,9 +15,14 @@ class App {
   }
 
   _setInitialStates() {
-    // gsap.set(".banner__headline1", {
-    //   backgroundPositionY: "50%",
-    // });
+    gsap.set(".news__card-inner .small-title, .news__card-inner .mid-text", {
+      yPercent: 150,
+      opacity: 0,
+    });
+    gsap.set(".news__card-inner img", {
+      xPercent: 80,
+      opacity: 0,
+    });
   }
 
   _createLenis() {
@@ -79,12 +86,61 @@ class App {
         end: "bottom top",
         scroll: true,
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
     tl.to(".news-and-events-cont", {
       ease: "none",
       y: "-500px",
+    });
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".news",
+        start: "top-=250 center",
+        markers: true,
+      },
+    });
+
+    this.cardInners.forEach((cardInner, index) => {
+      const smallTitle = cardInner.querySelector(".small-title");
+      const midText = cardInner.querySelector(".mid-text");
+      const imgbtn = cardInner.querySelector("img");
+
+      tl2
+        .to(
+          smallTitle,
+          {
+            ease: "expo.out",
+            yPercent: 0,
+            delay: 0,
+            opacity: 1,
+            duration: 1,
+          },
+          0
+        )
+        .to(
+          midText,
+          {
+            ease: "expo.out",
+            yPercent: 0,
+            delay: 0.4,
+            opacity: 1,
+            duration: 1,
+          },
+          0
+        )
+        .to(
+          imgbtn,
+          {
+            ease: "expo.out",
+            xPercent: 0,
+            delay: 0.2,
+            opacity: 1,
+            duration: 1,
+          },
+          0
+        );
     });
   }
 

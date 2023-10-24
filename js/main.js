@@ -9,7 +9,6 @@ class App {
   _initialize() {
     this._setInitialStates();
     this._createLenis();
-    this._createIntro();
     this._animateHeadlines();
     this._animateNewsEvents();
   }
@@ -25,22 +24,9 @@ class App {
     });
   }
 
+  //lenis set up
   _createLenis() {
     this.lenis = new Lenis();
-  }
-
-  _createIntro() {
-    // const tl = gsap.timeline();
-    // tl.to(
-    //   ".banner__headline1",
-    //   {
-    //     y: 32,
-    //     opacity: 1,
-    //     ease: "expo.out",
-    //     duration: 2,
-    //   },
-    //   0.5
-    // );
   }
 
   _animateHeadlines() {
@@ -144,6 +130,7 @@ class App {
     });
   }
 
+  //Additional set up for lenis
   _render(time) {
     this.lenis.raf(time);
 

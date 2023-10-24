@@ -1,3 +1,9 @@
+/*
+------------
+Font Imports
+------------
+*/
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf")
@@ -5,6 +11,71 @@
 }
 
 @import url("https://fonts.cdnfonts.com/css/campton");
+
+/*
+------------
+Variables
+------------
+*/
+
+$primary-text-color: #000;
+$secondary-text-color: #fff;
+$minor-text-color: #1a1a1a;
+
+/*
+------------
+Common styles
+------------
+*/
+
+.minor-text {
+  color: $minor-text-color;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
+}
+.mid-text {
+  color: $secondary-text-color;
+  font-family: "Campton";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 625;
+  line-height: normal;
+}
+.major-text {
+  color: $primary-text-color;
+  font-family: "Inter";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.great-text {
+  color: $primary-text-color;
+  font-family: "Inter";
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 98.5px; /* 102.604% */
+}
+.small-title {
+  color: $secondary-text-color;
+  font-family: "Campton";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 625;
+  line-height: normal;
+  letter-spacing: 3.36px;
+  text-transform: uppercase;
+}
+
+/*
+------------
+Base styles
+------------
+*/
 
 html,
 body {
@@ -17,48 +88,11 @@ body {
   height: 100vh;
 }
 
-.minor-text {
-  color: #1a1a1a;
-  font-family: "Inter";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%; /* 28.8px */
-}
-.mid-text {
-  color: #fff;
-  font-family: "Campton";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 625;
-  line-height: normal;
-}
-.major-text {
-  color: #000;
-  font-family: "Inter";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.great-text {
-  color: #000;
-  font-family: "Inter";
-  font-size: 96px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 98.5px; /* 102.604% */
-}
-.small-title {
-  color: #fff;
-  font-family: "Campton";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 625;
-  line-height: normal;
-  letter-spacing: 3.36px;
-  text-transform: uppercase;
-}
+/*
+------------
+Nav bar
+------------
+*/
 
 nav {
   display: flex;
@@ -92,6 +126,15 @@ nav {
   }
 }
 
+/*
+**************************
+
+Section 1
+
+**************************
+
+*/
+
 .main-section-1 {
   width: 100%;
   display: flex;
@@ -108,6 +151,13 @@ nav {
     align-items: center;
     height: calc(100vh + 1100px);
     background: linear-gradient(180deg, #fff 8.84%, #e4e4e7 63.4%);
+
+    /*
+------------
+Banner & Headlines
+------------
+*/
+
     .banner {
       display: flex;
       width: 100%;
@@ -141,7 +191,7 @@ nav {
         display: flex;
         flex-direction: column;
         width: 100%;
-        color: #1a1a1a;
+        color: $minor-text-color;
         text-align: center;
         font-family: "Inter";
         font-size: 180px;
@@ -154,10 +204,18 @@ nav {
       }
     }
 
+    /*  Container for both news and events  */
+
     .news-and-events-cont {
       position: absolute;
       bottom: -1400px;
     }
+
+    /*
+------------
+News
+------------
+*/
 
     .news {
       display: flex;
@@ -225,11 +283,17 @@ nav {
       }
     }
 
+    /*
+------------
+Events
+------------
+*/
+
     .events {
       width: 90%;
       padding: 30px 5% 0px 5%;
       &__title {
-        color: #000;
+        color: $primary-text-color;
       }
       &__inner-cont {
         display: inline-flex;
@@ -237,7 +301,7 @@ nav {
       &__inner-block {
         .minor-text,
         .mid-text {
-          color: #000;
+          color: $primary-text-color;
         }
       }
       &__inner-button {
@@ -252,6 +316,15 @@ nav {
     }
   }
 }
+
+/*
+**************************
+
+Section 2
+
+**************************
+
+*/
 
 .main-section-2 {
   width: 100%;
@@ -282,11 +355,18 @@ nav {
     height: 100%;
     background: url("../img/v1016-a-01\ 1.jpg"), lightgray 50% / cover no-repeat;
   }
+
+  /*
+------------
+About Us
+------------
+*/
+
   .about-us {
     width: 80%;
     margin-top: 200px;
     .small-title {
-      color: #000;
+      color: $primary-text-color;
     }
   }
 }

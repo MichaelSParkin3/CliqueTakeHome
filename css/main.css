@@ -140,7 +140,7 @@ Section 1
   justify-content: center;
   align-items: center;
   height: calc(100vh + 1100px);
-  background: linear-gradient(180deg, #fff 8.84%, #e4e4e7 63.4%);
+  background: linear-gradient(180deg, #fff 8.84%, #e4e4e8 63.4%);
   /*
   ------------
   Banner & Headlines
@@ -222,7 +222,7 @@ Section 1
   height: 496px;
   flex-shrink: 0;
   border-radius: 48px;
-  background: url("../img/Frame 15.jpg"), lightgray 50%/cover no-repeat;
+  background: url("../img/Frame 15.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -241,7 +241,7 @@ Section 1
   height: 232px;
   flex-shrink: 0;
   border-radius: 48px;
-  background: url("../img/Frame 25.jpg"), lightgray 50%/cover no-repeat;
+  background: url("../img/Frame 25.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -249,7 +249,7 @@ Section 1
   flex-direction: column;
 }
 .main-section-1__inner .news__right__card:nth-child(2) {
-  background: url("../img/Frame 26.jpg"), lightgray 50%/cover no-repeat;
+  background: url("../img/Frame 26.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -336,7 +336,7 @@ Section 2
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/v1016-a-01 1.jpg"), lightgray 50%/cover no-repeat;
+  background: url("../img/v1016-a-01 1.jpg"), #e4e4e8 50%/cover no-repeat;
 }
 .main-section-2 .about-us {
   width: 80%;
@@ -361,13 +361,13 @@ Section 2
 .main-section-2 .fifty-fifty__left__img:nth-child(1) {
   width: 567px;
   height: 503px;
-  background: url("../img/image 4.jpg"), lightgray 50%/cover no-repeat;
+  background: url("../img/image 4.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
 }
 .main-section-2 .fifty-fifty__left__img:nth-child(2) {
   width: 283px;
   height: 369px;
-  background: url("../img/image 5.jpg"), lightgray 50%/cover no-repeat;
+  background: url("../img/image 5.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
   transform: translate(340px, 363px);
   z-index: 1;
@@ -375,7 +375,7 @@ Section 2
 .main-section-2 .fifty-fifty__left__img:nth-child(3) {
   width: 278px;
   height: 282px;
-  background: url("../img/image 6.jpg"), lightgray 50%/cover no-repeat;
+  background: url("../img/image 6.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
   transform: translate(140px, 630px);
 }

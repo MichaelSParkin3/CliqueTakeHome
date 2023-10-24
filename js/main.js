@@ -84,7 +84,7 @@ class App {
     });
     tl.to(".news-and-events-cont", {
       ease: "none",
-      y: "-300px",
+      y: "-500px",
     });
   }
 

@@ -106,7 +106,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 250vh;
+    height: calc(100vh + 1100px);
     background: linear-gradient(180deg, #fff 8.84%, #e4e4e7 63.4%);
     .banner {
       display: flex;
@@ -149,8 +149,8 @@ nav {
     }
 
     .news-and-events-cont {
-      position: relative;
-      bottom: -300px;
+      position: absolute;
+      bottom: -1400px;
     }
 
     .news {

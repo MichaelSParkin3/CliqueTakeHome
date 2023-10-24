@@ -8,15 +8,14 @@ class App {
     this._setInitialStates();
     this._createLenis();
     this._createIntro();
-    this._createHero();
+    this._animateHeadlines();
+    this._animateNewsEvents();
   }
 
   _setInitialStates() {
-    gsap.set(".banner__headline1", {
-      // y: 32,
-      // opacity: 1,
-      backgroundPositionY: "50%",
-    });
+    // gsap.set(".banner__headline1", {
+    //   backgroundPositionY: "50%",
+    // });
   }
 
   _createLenis() {
@@ -37,7 +36,7 @@ class App {
     // );
   }
 
-  _createHero() {
+  _animateHeadlines() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".banner__headline1",
@@ -45,7 +44,7 @@ class App {
         end: "bottom center",
         scroll: true,
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
 
@@ -61,13 +60,31 @@ class App {
         end: "bottom center",
         scroll: true,
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
 
     tl2.to(".banner__headline2", {
       ease: "none",
-      yPercent: -80,
+      y: "-300px",
+    });
+  }
+
+  _animateNewsEvents() {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".banner__headline2",
+        start: "top center",
+        // endTrigger: ".news-and-events-cont",
+        end: "bottom top",
+        scroll: true,
+        scrub: true,
+        markers: true,
+      },
+    });
+    tl.to(".news-and-events-cont", {
+      ease: "none",
+      y: "-300px",
     });
   }
 

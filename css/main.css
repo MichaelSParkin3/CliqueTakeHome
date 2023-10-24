@@ -119,6 +119,9 @@ nav__interact {
   gap: 18px;
 }
 .main-section-1__inner .banner__headline1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   height: 350px;
   text-align: center;
   font-family: "Inter";
@@ -137,6 +140,9 @@ nav__interact {
   left: 0px;
 }
 .main-section-1__inner .banner__headline2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   color: #1a1a1a;
   text-align: center;
   font-family: "Inter";

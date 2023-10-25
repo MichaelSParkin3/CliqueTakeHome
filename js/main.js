@@ -35,8 +35,8 @@ class App {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".banner__headline1",
-        start: "top center",
-        end: "bottom center",
+        start: "top bottom",
+        end: "bottom top",
         scroll: true,
         scrub: true,
         markers: false,

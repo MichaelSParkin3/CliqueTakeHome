@@ -214,6 +214,15 @@ Section 1
   padding-left: 5%;
   padding-right: 5%;
 }
+.main-section-1__inner .news__left__card .img-div, .main-section-1__inner .news__right__card .img-div {
+  background: url("../img/Frame 25.jpg"), #e4e4e8 50%/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
 .main-section-1__inner .news__left {
   margin-right: 15px;
   flex: 4;
@@ -223,12 +232,16 @@ Section 1
   height: 496px;
   flex-shrink: 0;
   border-radius: 48px;
-  background: url("../img/Frame 15.jpg"), #e4e4e8 50%/cover no-repeat;
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: end;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.main-section-1__inner .news__left__card .img-div {
+  background: url("../img/Frame 15.jpg"), #e4e4e8 50%/cover no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .main-section-1__inner .news__right {
   margin-left: 15px;
@@ -242,14 +255,13 @@ Section 1
   height: 232px;
   flex-shrink: 0;
   border-radius: 48px;
-  background: url("../img/Frame 25.jpg"), #e4e4e8 50%/cover no-repeat;
-  background-size: cover;
-  background-position: center;
   display: flex;
   justify-content: end;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
-.main-section-1__inner .news__right__card:nth-child(2) {
+.main-section-1__inner .news__right__card:nth-child(2) .img-div {
   background: url("../img/Frame 26.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
   background-position: center;
@@ -262,6 +274,7 @@ Section 1
   margin-left: 15px;
 }
 .main-section-1__inner .news__card-inner {
+  z-index: 1;
   padding: 0px 7.5% 3% 7.5%;
 }
 .main-section-1__inner .news__card-inner h4 {
@@ -269,6 +282,12 @@ Section 1
 }
 .main-section-1__inner .news__card-inner p {
   margin: 0;
+}
+.main-section-1__inner .news__left__card:hover .img-div {
+  transform: scale(1.25);
+}
+.main-section-1__inner .news__right__card:hover .img-div {
+  transform: scale(1.25);
 }
 .main-section-1__inner .events {
   width: 90%;

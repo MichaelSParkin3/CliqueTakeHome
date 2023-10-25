@@ -234,6 +234,17 @@ News
       width: 90%;
       padding-left: 5%;
       padding-right: 5%;
+      &__left__card .img-div,
+      &__right__card .img-div {
+        background: url("../img/Frame\ 25.jpg"),
+          $secondary-bg-color 50% / cover no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+      }
       &__left {
         margin-right: 15px;
         flex: 4;
@@ -242,13 +253,17 @@ News
           height: 496px;
           flex-shrink: 0;
           border-radius: 48px;
-          background: url("../img/Frame\ 15.jpg"),
-            $secondary-bg-color 50% / cover no-repeat;
-          background-size: cover;
-          background-position: center;
           display: flex;
           justify-content: end;
           flex-direction: column;
+          position: relative;
+          overflow: hidden;
+          .img-div {
+            background: url("../img/Frame\ 15.jpg"),
+              $secondary-bg-color 50% / cover no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
         }
       }
       &__right {
@@ -262,15 +277,13 @@ News
           height: 232px;
           flex-shrink: 0;
           border-radius: 48px;
-          background: url("../img/Frame\ 25.jpg"),
-            $secondary-bg-color 50% / cover no-repeat;
-          background-size: cover;
-          background-position: center;
           display: flex;
           justify-content: end;
           flex-direction: column;
+          position: relative;
+          overflow: hidden;
         }
-        &__card:nth-child(2) {
+        &__card:nth-child(2) .img-div {
           background: url("../img/Frame\ 26.jpg"),
             $secondary-bg-color 50% / cover no-repeat;
           background-size: cover;
@@ -285,6 +298,7 @@ News
         }
       }
       &__card-inner {
+        z-index: 1;
         padding: 0px 7.5% 3% 7.5%;
         h4 {
           margin: 0;
@@ -293,6 +307,15 @@ News
           margin: 0;
         }
       }
+    }
+
+    //News CSS Animations
+
+    .news__left__card:hover .img-div {
+      transform: scale(1.25);
+    }
+    .news__right__card:hover .img-div {
+      transform: scale(1.25);
     }
 
     /*

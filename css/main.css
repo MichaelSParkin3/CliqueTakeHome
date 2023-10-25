@@ -363,13 +363,14 @@ Section 2
   height: 503px;
   background: url("../img/image 4.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
+  transform: translate(0px, 200px);
 }
 .main-section-2 .fifty-fifty__left__img:nth-child(2) {
   width: 283px;
   height: 369px;
   background: url("../img/image 5.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
-  transform: translate(340px, 363px);
+  transform: translate(340px, 563px);
   z-index: 1;
 }
 .main-section-2 .fifty-fifty__left__img:nth-child(3) {
@@ -377,7 +378,7 @@ Section 2
   height: 282px;
   background: url("../img/image 6.jpg"), #e4e4e8 50%/cover no-repeat;
   background-size: cover;
-  transform: translate(140px, 630px);
+  transform: translate(140px, 830px);
 }
 .main-section-2 .fifty-fifty__right {
   flex: 1;

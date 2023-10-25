@@ -1,6 +1,7 @@
 class App {
   constructor() {
     this.cardInners = [...document.querySelectorAll(".news__card-inner")];
+    this.imageStack = [...document.querySelectorAll(".fifty-fifty__left__img")];
 
     this._initialize();
     this._render();
@@ -11,6 +12,7 @@ class App {
     this._createLenis();
     this._animateHeadlines();
     this._animateNewsEvents();
+    this._animateImageStack();
   }
 
   _setInitialStates() {
@@ -84,7 +86,7 @@ class App {
       scrollTrigger: {
         trigger: ".news",
         start: "top-=250 center",
-        markers: true,
+        markers: false,
       },
     });
 
@@ -127,6 +129,32 @@ class App {
           },
           0
         );
+    });
+  }
+
+  _animateImageStack() {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about-us",
+        start: "center center",
+        endTrigger: ".fifty-fifty",
+        end: "bottom center",
+        scroll: true,
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    this.imageStack.forEach((img, index) => {
+      const multi = 150 + 50 * index;
+      tl.to(
+        img,
+        {
+          y: "-=" + multi,
+          delay: 0,
+        },
+        0
+      );
     });
   }
 

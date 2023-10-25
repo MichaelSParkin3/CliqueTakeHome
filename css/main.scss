@@ -403,6 +403,7 @@ fifty fifty
         background: url("../img/image\ 4.jpg"),
           $secondary-bg-color 50% / cover no-repeat;
         background-size: cover;
+        transform: translate(0px, 200px);
       }
       &__img:nth-child(2) {
         width: 283px;
@@ -410,7 +411,7 @@ fifty fifty
         background: url("../img/image\ 5.jpg"),
           $secondary-bg-color 50% / cover no-repeat;
         background-size: cover;
-        transform: translate(340px, 363px);
+        transform: translate(340px, 563px);
         z-index: 1;
       }
       &__img:nth-child(3) {
@@ -419,7 +420,7 @@ fifty fifty
         background: url("../img/image\ 6.jpg"),
           $secondary-bg-color 50% / cover no-repeat;
         background-size: cover;
-        transform: translate(140px, 630px);
+        transform: translate(140px, 830px);
       }
     }
     &__right {

@@ -26,6 +26,9 @@ $primary-bg-color: #fff;
 $secondary-bg-color: #e4e4e8;
 $minor-bg-color: #1a1a1a;
 
+$button-primary-color: #fff;
+$button-secondary-color: #ff5b01;
+
 $border-color: #dfdfe2;
 
 /*
@@ -75,6 +78,28 @@ Common styles
   line-height: normal;
   letter-spacing: 3.36px;
   text-transform: uppercase;
+}
+
+.button-style {
+  color: $primary-text-color;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.88px;
+  text-transform: uppercase;
+  display: flex;
+  padding: 24px 36px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 100px;
+  background: $secondary-text-color;
+  border: none;
+}
+.button-style:hover {
+  color: $secondary-text-color;
+  background: $button-secondary-color;
 }
 
 /*
@@ -347,8 +372,8 @@ Events
         display: flex;
         justify-content: center;
         align-items: center;
+        flex: 1;
         button {
-          color: $primary-text-color;
         }
       }
       &__divider {
@@ -461,6 +486,70 @@ fifty fifty
     }
     &__right {
       flex: 1;
+      .top-text {
+        color: $primary-text-color;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .mid-text {
+        color: $primary-text-color;
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .bot-text {
+        color: $minor-text-color;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 28.8px */
+      }
+      .stat-cont {
+        display: flex;
+        width: 551px;
+        padding: 16px 60px;
+        align-items: center;
+        gap: 24px;
+        border-radius: 16px;
+        border-left: 6px solid #ff5b01;
+        background: #f1f1f1;
+        .big-num {
+          margin: 0;
+        }
+        .sub-title {
+          color: #1b1b1b;
+          font-family: Inter;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: 2.88px;
+          text-transform: uppercase;
+        }
+        .sub-text {
+          color: #1b1b1b;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: 120%; /* 16.8px */
+        }
+      }
+      button {
+        color: $secondary-text-color;
+        background: #ff5b01;
+        margin-top: 25px;
+      }
+      button:hover {
+        color: $secondary-text-color;
+        background: $primary-text-color;
+      }
     }
   }
 }

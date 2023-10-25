@@ -65,6 +65,29 @@ Common styles
   text-transform: uppercase;
 }
 
+.button-style {
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.88px;
+  text-transform: uppercase;
+  display: flex;
+  padding: 24px 36px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 100px;
+  background: #fff;
+  border: none;
+}
+
+.button-style:hover {
+  color: #fff;
+  background: #ff5b01;
+}
+
 /*
 ------------
 Base styles
@@ -311,9 +334,7 @@ Section 1
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.main-section-1__inner .events__inner-button button {
-  color: #000;
+  flex: 1;
 }
 .main-section-1__inner .events__divider {
   width: 1px;
@@ -414,6 +435,70 @@ Section 2
 }
 .main-section-2 .fifty-fifty__right {
   flex: 1;
+}
+.main-section-2 .fifty-fifty__right .top-text {
+  color: #000;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.main-section-2 .fifty-fifty__right .mid-text {
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.main-section-2 .fifty-fifty__right .bot-text {
+  color: #1a1a1a;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 28.8px */
+}
+.main-section-2 .fifty-fifty__right .stat-cont {
+  display: flex;
+  width: 551px;
+  padding: 16px 60px;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+  border-left: 6px solid #ff5b01;
+  background: #f1f1f1;
+}
+.main-section-2 .fifty-fifty__right .stat-cont .big-num {
+  margin: 0;
+}
+.main-section-2 .fifty-fifty__right .stat-cont .sub-title {
+  color: #1b1b1b;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.88px;
+  text-transform: uppercase;
+}
+.main-section-2 .fifty-fifty__right .stat-cont .sub-text {
+  color: #1b1b1b;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+.main-section-2 .fifty-fifty__right button {
+  color: #fff;
+  background: #ff5b01;
+  margin-top: 25px;
+}
+.main-section-2 .fifty-fifty__right button:hover {
+  color: #fff;
+  background: #000;
 }
 
 /*

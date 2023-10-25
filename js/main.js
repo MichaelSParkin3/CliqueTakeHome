@@ -45,7 +45,7 @@ class App {
 
     tl.to(".banner__headline1", {
       ease: "none",
-      backgroundPositionY: "70%",
+      backgroundPositionY: "80%",
     });
 
     const tl2 = gsap.timeline({

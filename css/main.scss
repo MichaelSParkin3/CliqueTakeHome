@@ -24,6 +24,7 @@ $minor-text-color: #1a1a1a;
 
 $primary-bg-color: #fff;
 $secondary-bg-color: #e4e4e8;
+$minor-bg-color: #1a1a1a;
 
 $border-color: #dfdfe2;
 
@@ -193,7 +194,7 @@ Banner & Headlines
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         position: absolute;
-        bottom: -150px;
+        bottom: -100px;
         left: 0px;
       }
       &__headline2 {
@@ -209,7 +210,9 @@ Banner & Headlines
         line-height: 155.5px; /* 86.389% */
         position: absolute;
         left: 0;
-        bottom: -800px;
+        bottom: 0px;
+        //bottom: -800px;
+        transform: translate(0px, 600px);
       }
     }
 
@@ -233,7 +236,7 @@ News
       padding-right: 5%;
       &__left {
         margin-right: 15px;
-        width: 60%;
+        flex: 4;
         &__card {
           width: 100%;
           height: 496px;
@@ -253,7 +256,7 @@ News
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 40%;
+        flex: 2;
         &__card {
           width: 100%;
           height: 232px;
@@ -308,12 +311,22 @@ Events
         display: inline-flex;
       }
       &__inner-block {
-        .minor-text,
-        .mid-text {
-          color: $primary-text-color;
+        display: flex;
+        flex: 1;
+        .text-block {
+          .minor-text,
+          .mid-text {
+            color: $primary-text-color;
+          }
         }
       }
       &__inner-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          color: $primary-text-color;
+        }
       }
       &__divider {
         width: 1px;
@@ -439,4 +452,25 @@ Section 3
 */
 
 .main-section-3 {
+  height: auto;
+  &__inner {
+    background: #f1f1f1;
+    border-radius: 24px;
+    margin: 50px;
+    height: 938px;
+  }
+}
+
+/*
+**************************
+
+Footer
+
+**************************
+
+*/
+
+footer {
+  background: #1a1a1a;
+  height: 489px;
 }

@@ -61,7 +61,7 @@ class App {
 
     tl2.to(".banner__headline2", {
       ease: "none",
-      y: "-300px",
+      y: "400px",
     });
   }
 
